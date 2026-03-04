@@ -9,6 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Grants write permission for the GITHUB_TOKEN
+      pull-requests: write # Add other needed permissions
+      actions: read
+      security-events: write
     steps:
       - uses: actions/checkout@v2
         with:
