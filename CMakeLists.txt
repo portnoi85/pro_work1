@@ -28,13 +28,13 @@ target_link_libraries(helloworld_cli
 )
 
 if(WITH_BOOST_TEST)
-    add_subdirectory(btest)
     enable_testing()
+    add_subdirectory(btest)
 endif()
 
 if(WITH_GOOGLE_TEST)
-    add_subdirectory(gtest)
     enable_testing()
+    add_subdirectory(gtest)
 endif()
 
 if (MSVC)
